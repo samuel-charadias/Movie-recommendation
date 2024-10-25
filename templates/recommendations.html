@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendações</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+</head>
+<body>
+    <h1 class="titulo">Filmes Recomendados</h1>
+    
+    <div class="recomendacoes">
+        {% if title %}
+    </div>
+        <h2 class="escolha">Para o título: "{{ title }}"</h2>
+    <div class="recomendacoes">
+            {% elif genre %}
+    </div>
+        <h2 class="escolha">Para o gênero: "{{ genre }}"</h2>
+    <div class="recomendacoes">
+            {% endif %}
+    
+        <ul>
+            {% for movie in recommendations %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+
+        <a class="volta" href="/">Voltar</a>
+    </div>
+
+</body>
+</html>

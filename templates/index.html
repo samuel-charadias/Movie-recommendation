@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Recomendação de Filmes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&family=Secular+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+</head>
+<body>
+    <h1 class="titulo">Bem-vindo ao Sistema de Recomendação de Filmes!</h1>
+    <h2 class="escolha">Escolha uma opção:</h2>
+    <div class="caixa">
+        <form action="/recommend_by_title" method="POST">
+            <label for="name">Recomendações por Título:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <form action="/recommend_by_genre" method="post">
+            <label for="genres">Recomendações por Gênero:</label>
+            <input type="text" id="genres" name="genres" required>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+</body>
+</html>
