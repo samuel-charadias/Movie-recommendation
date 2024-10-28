@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 
 # Carregar dados do filme (certifique-se de que seu DataFrame 'filmes' esteja carregado corretamente)
-filmes = pd.read_csv('c:\\Users\\JCD\\Documents\\Trabalho_Algebra\\movies1.csv')# Exemplo de carregamento de dados
+filmes = pd.read_csv('movies1.csv')# Exemplo de carregamento de dados
 filmes['genres'] = filmes['genres'].fillna('')
 
 # Criar a matriz TF-IDF
